@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>حكاية الدكان | دكان الريلز</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&amp;family=Reem+Kufi:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #fcf9f8;
+            background-image: url("https://www.transparenttextures.com/patterns/paper.png");
+            scroll-behavior: smooth;
+        }
+        .tatreez-divider {
+            height: 12px;
+            background-image: repeating-linear-gradient(45deg, #486644 0, #486644 2px, transparent 2px, transparent 10px);
+            opacity: 0.3;
+        }
+        .receipt-edge {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 98% 100%, 96% 95%, 94% 100%, 92% 95%, 90% 100%, 88% 95%, 86% 100%, 84% 95%, 82% 100%, 80% 95%, 78% 100%, 76% 95%, 74% 100%, 72% 95%, 70% 100%, 68% 95%, 66% 100%, 64% 95%, 62% 100%, 60% 95%, 58% 100%, 56% 95%, 54% 100%, 52% 95%, 50% 100%, 48% 95%, 46% 100%, 44% 95%, 42% 100%, 40% 95%, 38% 100%, 36% 95%, 34% 100%, 32% 95%, 30% 100%, 28% 95%, 26% 100%, 24% 95%, 22% 100%, 20% 95%, 18% 100%, 16% 95%, 14% 100%, 12% 95%, 10% 100%, 8% 95%, 6% 100%, 4% 95%, 2% 100%, 0% 95%);
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fcf9f8",
+                        "on-secondary-container": "#721603",
+                        "on-primary-fixed-variant": "#304e2e",
+                        "surface-variant": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#85230f",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#052107",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#f0eded",
+                        "inverse-surface": "#313030",
+                        "on-secondary-fixed": "#3d0600",
+                        "on-surface-variant": "#434840",
+                        "surface": "#fcf9f8",
+                        "on-tertiary-fixed": "#251a00",
+                        "on-tertiary-fixed-variant": "#5a4302",
+                        "on-primary-container": "#98b991",
+                        "primary-fixed-dim": "#aed0a7",
+                        "surface-container-highest": "#e5e2e1",
+                        "outline": "#737970",
+                        "inverse-primary": "#aed0a7",
+                        "secondary-fixed": "#ffdad3",
+                        "surface-container-low": "#f6f3f2",
+                        "primary-container": "#2d4a2b",
+                        "surface-bright": "#fcf9f8",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dcd9d9",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1c1b1b",
+                        "secondary-container": "#ff7d60",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#c3c8be",
+                        "on-surface": "#1c1b1b",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdf9b",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-fixed-dim": "#ffb4a4",
+                        "tertiary": "#3b2b00",
+                        "primary": "#173317",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#564000",
+                        "on-tertiary-container": "#cdac64",
+                        "tertiary-fixed-dim": "#e4c278",
+                        "primary-fixed": "#c9ecc1",
+                        "secondary": "#a53b24",
+                        "surface-tint": "#486644"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1200px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Tajawal"],
+                        "headline-sm": ["Reem Kufi"],
+                        "display-lg-mobile": ["Reem Kufi"],
+                        "body-lg": ["Tajawal"],
+                        "headline-md": ["Reem Kufi"],
+                        "display-lg": ["Reem Kufi"],
+                        "label-md": ["Tajawal"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex flex-row-reverse justify-between items-center px-margin-desktop h-20 bg-primary border-b border-tertiary-container shadow-none">
+<div class="font-headline-md text-headline-md text-tertiary-fixed-dim">دكان الريلز</div>
+<div class="hidden md:flex flex-row-reverse space-x-reverse space-x-8">
+<a class="text-on-primary opacity-80 font-headline-sm text-headline-sm hover:text-tertiary-fixed-dim transition-colors duration-300" href="#">الرئيسية</a>
+<a class="text-on-primary opacity-80 font-headline-sm text-headline-sm hover:text-tertiary-fixed-dim transition-colors duration-300" href="#">خدماتنا</a>
+<a class="text-on-primary opacity-80 font-headline-sm text-headline-sm hover:text-tertiary-fixed-dim transition-colors duration-300" href="#">أعمالنا</a>
+<a class="text-tertiary-fixed font-bold border-b-2 border-tertiary-fixed pb-1 font-headline-sm text-headline-sm" href="#">عن الدكان</a>
+<a class="text-on-primary opacity-80 font-headline-sm text-headline-sm hover:text-tertiary-fixed-dim transition-colors duration-300" href="#">اتصل بنا</a>
+</div>
+<button class="md:hidden text-tertiary-fixed-dim">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<main class="pt-20">
+<!-- 1. Editorial Hero -->
+<section class="relative px-margin-mobile md:px-margin-desktop py-20">
+<div class="max-w-container-max mx-auto">
+<div class="relative border-[16px] border-primary shadow-lg overflow-hidden group">
+<div class="w-full h-[614px] bg-cover bg-center grayscale contrast-125 transition-transform duration-700 group-hover:scale-105" data-alt="A high-contrast grainy black and white editorial photograph of a creative team dressed in modern attire but posed within a traditional rustic Palestinian shop filled with woven baskets and jars. The lighting is dramatic and moody, reminiscent of a high-end fashion magazine spread. The setting is grounded and historical, reflecting the brand's 'Dukkan' heritage within a contemporary context." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNTft1nwTQwoXRwctC0kqNqEQ57eSRxG2LRnKMcAhpiee2a_5nup1a0csRGeAvUFfS5WvwskgV6F-53eD87JM98LWq70DCLw8FkGitiJKc4iFlSZHskld2ejIeU0HnTNZUCBgpB45haS1Qbr5phuNXSXUGw1FZlVG9432wVSXyNutJB1rXFtgjgPzmjKfAr8WgUc6f58JGlE9T1xMEUcCcpBgKjI-1ivjCOYITFyoUzhSrP_fVlpNkMIqE4CORpAMGf1G73HSuQyU')"></div>
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+<h1 class="font-display-lg text-display-lg md:text-[80px] text-tertiary-fixed-dim drop-shadow-2xl">حكاية الدكان</h1>
+</div>
+</div>
+<div class="mt-8 tatreez-divider w-full"></div>
+</div>
+</section>
+<!-- 2. Founder Story -->
+<section class="px-margin-mobile md:px-margin-desktop py-20 bg-surface">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<div class="md:col-span-1 hidden md:flex justify-center">
+<h2 class="vertical-text font-headline-md text-headline-md text-primary tracking-widest uppercase border-r border-outline-variant pr-4">قصة التأسيس</h2>
+</div>
+<div class="md:col-span-7 space-y-8">
+<h2 class="md:hidden font-headline-md text-headline-md text-primary mb-6">قصة التأسيس</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        بدأت حكايتنا من رغبة في استعادة روح "الدكان"؛ ذلك المكان الذي لم يكن مجرد متجر، بل كان قلب الحي ومستودع حكاياته. في <span class="text-secondary font-bold">دكان الريلز</span>، نؤمن أن كل علامة تجارية هي قصة تستحق أن تُروى بصدق وبراعة.
+                    </p>
+<div class="border-r-4 border-secondary pr-6 py-2">
+<p class="font-headline-sm text-headline-sm text-secondary italic">
+                            "نحن لا نصنع محتوى رقمياً فحسب، نحن نحيك الهوية بخيوط من التراث وأدوات من المستقبل."
+                        </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-loose">
+                        انطلقنا من زقاق صغير، محملين بشغف السرد البصري. وجدنا أن العالم الرقمي اليوم يفتقر إلى الدفء الإنساني، فقررنا أن نكون "دكاكينياً" العصر الحديث؛ نختار الكلمات بعناية، ونصوب العدسات بتركيز، ونقدم لعملائنا خلطة سرية تجمع بين الأصالة والابتكار التقني.
+                    </p>
+</div>
+<div class="md:col-span-4 relative">
+<div class="bg-surface-container-high p-8 border border-outline-variant shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-8 h-8 bg-tertiary-fixed-dim transform rotate-45 translate-x-4 -translate-y-4"></div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">الرؤية</h3>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                            أن نعيد تعريف التسويق الرقمي كفنون حرفية يدوية، حيث كل "ريلز" هو قطعة فنية تعكس جوهر صاحبها.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Timeline -->
+<section class="px-margin-mobile md:px-margin-desktop py-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-4xl mx-auto">
+<h2 class="font-display-lg text-display-lg text-center mb-16 text-primary">محطاتنا</h2>
+<div class="relative">
+<!-- Vertical Line -->
+<div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-outline-variant"></div>
+<div class="space-y-24 relative">
+<!-- Milestone 1 -->
+<div class="flex flex-col md:flex-row items-center">
+<div class="flex-1 md:text-left md:pl-12 order-2 md:order-1">
+<h4 class="font-headline-sm text-headline-sm text-secondary">البداية: أول ريلز</h4>
+<p class="text-on-surface-variant">كانت مجرد فكرة في مقهى قديم، حيث التقت الخبرة التقنية بروح الحكاية.</p>
+</div>
+<div class="z-10 bg-surface-container-low border-2 border-tertiary p-2 rounded-full order-1 md:order-2 my-4 md:my-0">
+<span class="material-symbols-outlined text-tertiary text-4xl" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div class="flex-1 hidden md:block order-3"></div>
+</div>
+<!-- Milestone 2 -->
+<div class="flex flex-col md:flex-row items-center">
+<div class="flex-1 hidden md:block"></div>
+<div class="z-10 bg-surface-container-low border-2 border-tertiary p-2 rounded-full my-4 md:my-0">
+<span class="material-symbols-outlined text-tertiary text-4xl" style="font-variation-settings: 'FILL' 1;">history_edu</span>
+</div>
+<div class="flex-1 md:text-right md:pr-12">
+<h4 class="font-headline-sm text-headline-sm text-secondary">صناعة الهوية</h4>
+<p class="text-on-surface-variant">طورنا لغتنا الخاصة، مزيج من الخط العربي والنمط السينمائي الحديث.</p>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="flex flex-col md:flex-row items-center">
+<div class="flex-1 md:text-left md:pl-12 order-2 md:order-1">
+<h4 class="font-headline-sm text-headline-sm text-secondary">افتتاح الدكان</h4>
+<p class="text-on-surface-variant">تحولنا من مشروع فردي إلى مؤسسة تضم نخبة من المبدعين والحرفيين الرقميين.</p>
+</div>
+<div class="z-10 bg-surface-container-low border-2 border-tertiary p-2 rounded-full order-1 md:order-2 my-4 md:my-0">
+<span class="material-symbols-outlined text-tertiary text-4xl" style="font-variation-settings: 'FILL' 1;">storefront</span>
+</div>
+<div class="flex-1 hidden md:block order-3"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Values Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-24 bg-background">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary">قيمنا الراسخة</h2>
+<div class="mt-4 tatreez-divider w-32 mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Value 1 -->
+<div class="text-center group p-8 hover:bg-surface-container transition-colors duration-300">
+<div class="mb-6 inline-block p-4 bg-primary-fixed rounded-xl text-primary transform transition-transform group-hover:rotate-12">
+<span class="material-symbols-outlined text-5xl">nature</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">الأصالة (Rootedness)</h3>
+<p class="text-on-surface-variant">جذورنا ممتدة في عمق التراث، نستلهم من الماضي لنبني المستقبل الرقمي.</p>
+</div>
+<!-- Value 2 -->
+<div class="text-center group p-8 hover:bg-surface-container transition-colors duration-300">
+<div class="mb-6 inline-block p-4 bg-secondary-fixed rounded-xl text-secondary transform transition-transform group-hover:-rotate-12">
+<span class="material-symbols-outlined text-5xl">coffee</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-4">الضيافة (Hospitality)</h3>
+<p class="text-on-surface-variant">نتعامل مع كل عميل كضيف عزيز، نوفر له رعاية واهتماماً يتجاوزان حدود العمل الرسمي.</p>
+</div>
+<!-- Value 3 -->
+<div class="text-center group p-8 hover:bg-surface-container transition-colors duration-300">
+<div class="mb-6 inline-block p-4 bg-tertiary-fixed rounded-xl text-tertiary transform transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-5xl">handyman</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">الحرفة (Craft)</h3>
+<p class="text-on-surface-variant">كل منتج يخرج من دكاننا هو ثمرة عمل يدوي رقمي دقيق، لا نؤمن بالنماذج الجاهزة.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-20 flex flex-col items-center">
+<h2 class="font-headline-md text-headline-md text-primary mb-8 text-center px-4">هل أنت مستعد لنكتب حكايتك القادمة؟</h2>
+<button class="bg-secondary text-on-secondary px-12 py-4 rounded-lg font-label-md text-label-md hover:brightness-90 active:scale-95 transition-all shadow-md">
+                ابدأ رحلتك معنا
+            </button>
+</section>
+</main>
+<!-- SideNavBar (WhatsApp Toggle) -->
+<div class="fixed bottom-8 left-8 z-50">
+<a class="bg-secondary text-on-secondary flex items-center justify-center rounded-full w-16 h-16 shadow-md hover:bg-on-secondary-fixed-variant transition-all hover:-translate-y-1 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</a>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container border-x border-outline-variant border-dashed w-full max-w-2xl mx-auto pt-10 pb-20 receipt-edge shadow-sm flex flex-col items-center text-center space-y-4 px-gutter">
+<div class="font-headline-sm text-headline-sm text-primary">دكان الريلز</div>
+<div class="flex space-x-reverse space-x-6">
+<a class="text-on-surface-variant font-body-md text-body-md hover:underline decoration-secondary" href="#">الخدمات</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:underline decoration-secondary" href="#">تواصل معنا</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:underline decoration-secondary" href="#">سياسة الخصوصية</a>
+</div>
+<div class="text-on-surface opacity-60 font-body-md text-body-md mt-6">
+            شكراً لزيارتكم دكان الريلز - جميع الحقوق محفوظة ٢٠٢٤
+        </div>
+<div class="w-full h-8 flex justify-center opacity-10">
+<div class="w-full h-full bg-[radial-gradient(circle,currentColor_1px,transparent_1px)] bg-[size:10px_10px]"></div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for smooth scrolling and header hide/show
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const nav = document.querySelector('nav');
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+            }
+            nav.style.transition = 'transform 0.3s ease-in-out';
+            lastScroll = currentScroll;
+        });
+
+        // Simple animation on scroll reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>دكان الريلز - صناعة محتوى إبداعي</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&amp;family=Reem+Kufi:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#fcf9f8",
+                    "on-secondary-container": "#721603",
+                    "on-primary-fixed-variant": "#304e2e",
+                    "surface-variant": "#e5e2e1",
+                    "on-secondary-fixed-variant": "#85230f",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#052107",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#f0eded",
+                    "inverse-surface": "#313030",
+                    "on-secondary-fixed": "#3d0600",
+                    "on-surface-variant": "#434840",
+                    "surface": "#fcf9f8",
+                    "on-tertiary-fixed": "#251a00",
+                    "on-tertiary-fixed-variant": "#5a4302",
+                    "on-primary-container": "#98b991",
+                    "primary-fixed-dim": "#aed0a7",
+                    "surface-container-highest": "#e5e2e1",
+                    "outline": "#737970",
+                    "inverse-primary": "#aed0a7",
+                    "secondary-fixed": "#ffdad3",
+                    "surface-container-low": "#f6f3f2",
+                    "primary-container": "#2d4a2b",
+                    "surface-bright": "#fcf9f8",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#dcd9d9",
+                    "on-error-container": "#93000a",
+                    "on-background": "#1c1b1b",
+                    "secondary-container": "#ff7d60",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#c3c8be",
+                    "on-surface": "#1c1b1b",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdf9b",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-container-high": "#eae7e7",
+                    "secondary-fixed-dim": "#ffb4a4",
+                    "tertiary": "#3b2b00",
+                    "primary": "#173317",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#564000",
+                    "on-tertiary-container": "#cdac64",
+                    "tertiary-fixed-dim": "#e4c278",
+                    "primary-fixed": "#c9ecc1",
+                    "secondary": "#a53b24",
+                    "surface-tint": "#486644"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "container-max": "1200px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["Tajawal"],
+                    "headline-sm": ["Reem Kufi"],
+                    "display-lg-mobile": ["Reem Kufi"],
+                    "body-lg": ["Tajawal"],
+                    "headline-md": ["Reem Kufi"],
+                    "display-lg": ["Reem Kufi"],
+                    "label-md": ["Tajawal"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fcf9f8;
+            color: #1c1b1b;
+            overflow-x: hidden;
+        }
+        .paper-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100%); }
+        }
+        .marquee-reverse {
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: marquee-reverse 30s linear infinite;
+        }
+        @keyframes marquee-reverse {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .tatreez-border {
+            mask-image: url('https://www.transparenttextures.com/patterns/pixel-weave.png');
+            background-color: currentColor;
+        }
+        .shop-sign-shadow {
+            box-shadow: 0 4px 0 0 #052107;
+        }
+        .receipt-edge {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 98% 100%, 96% 95%, 94% 100%, 92% 95%, 90% 100%, 88% 95%, 86% 100%, 84% 95%, 82% 100%, 80% 95%, 78% 100%, 76% 95%, 74% 100%, 72% 95%, 70% 100%, 68% 95%, 66% 100%, 64% 95%, 62% 100%, 60% 95%, 58% 100%, 56% 95%, 54% 100%, 52% 95%, 50% 100%, 48% 95%, 46% 100%, 44% 95%, 42% 100%, 40% 95%, 38% 100%, 36% 95%, 34% 100%, 32% 95%, 30% 100%, 28% 95%, 26% 100%, 24% 95%, 22% 100%, 20% 95%, 18% 100%, 16% 95%, 14% 100%, 12% 95%, 10% 100%, 8% 95%, 6% 100%, 4% 95%, 2% 100%, 0% 95%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-secondary selection:text-on-secondary">
+<!-- 1. TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex flex-row-reverse justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-primary border-b border-tertiary-container shadow-sm">
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md text-tertiary-fixed-dim">دكان الريلز</span>
+</div>
+<nav class="hidden md:flex flex-row-reverse items-center gap-8">
+<a class="text-tertiary-fixed font-bold border-b-2 border-tertiary-fixed pb-1 font-headline-sm text-headline-sm" href="index.html" aria-current="page">الرئيسية</a>
+<a class="text-on-primary opacity-80 hover:text-tertiary-fixed-dim transition-colors duration-300 font-headline-sm text-headline-sm" href="services.html">خدماتنا</a>
+<a class="text-on-primary opacity-80 hover:text-tertiary-fixed-dim transition-colors duration-300 font-headline-sm text-headline-sm" href="works.html">أعمالنا</a>
+<a class="text-on-primary opacity-80 hover:text-tertiary-fixed-dim transition-colors duration-300 font-headline-sm text-headline-sm" href="about.html">عن الدكان</a>
+<a class="text-on-primary opacity-80 hover:text-tertiary-fixed-dim transition-colors duration-300 font-headline-sm text-headline-sm" href="#contact">اتصل بنا</a>
+</nav>
+<button class="md:hidden text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</header>
+<!-- 2. Hero Section -->
+<section class="relative pt-32 pb-20 md:pt-48 md:pb-40 overflow-hidden paper-texture">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<!-- Left Side Content -->
+<div class="md:col-span-7 flex flex-col items-start gap-8 z-10">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary max-w-xl leading-tight">
+                    بدّك ريلز يوصل؟ <br/> <span class="text-secondary">تعا عالدكان</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    دكان الريلز هو "دكان الحارة" للمحتوى الرقمي. نحن نحضر لك خلطة سحرية من الإبداع والاحترافية لنجعل علامتك التجارية تتصدر المشهد في ثوانٍ معدودة.
+                </p>
+<div class="flex gap-4">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-on-secondary-fixed-variant transition-all transform active:scale-95">
+                        احجز ريلزك الآن
+                    </button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all">
+                        تفرج على بضاعتنا
+                    </button>
+</div>
+</div>
+<!-- Right Side Mockup -->
+<div class="md:col-span-5 relative flex justify-center z-10 group">
+<div class="relative w-72 md:w-80 aspect-[9/19] bg-inverse-surface rounded-[3rem] border-[8px] border-inverse-surface shadow-2xl overflow-hidden transform hover:rotate-2 transition-transform duration-700 ease-out parallax-element">
+<!-- Reels Video Mockup -->
+<div class="w-full h-full bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A professional high-quality video production still of a colorful street market in Palestine, showing close-ups of traditional crafts and vibrant spices, captured in a dynamic portrait orientation as if viewed on a smartphone. The lighting is warm and cinematic, reflecting the premium editorial style of the 'Dukkan' brand with deep greens and earthy terracotta tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFaJ1oxtSx8U6VEUMfblwrxCsauHxKuwci8oWJ7kkcCQKcUUPfU7xUp0RsSl_Ig6bEn3X9FV4sgLuer2XwNYmm46lZ0-L4U0l7LmHHZwgFqkQlAgdHjgx2bVdI4hDguimuAD2PGXErBY82ZF7BkCXjiT5CV9accKE0-skXavu1p3YUkQkatfe3Sd_aJ9U1GiEdMoPxvwXPZkPtqPUlts9fTM6I7xmObJ05z0kIFYHi4jXOJTr4EcsplNguJS4BCydHGk4V3TJAPL4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6 gap-2">
+<div class="w-1/2 h-2 bg-on-primary/40 rounded-full"></div>
+<div class="w-3/4 h-2 bg-on-primary/20 rounded-full"></div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-6xl opacity-80">play_circle</span>
+</div>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-tertiary-fixed rounded-full -z-10 opacity-50 blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-primary-fixed-dim rounded-full -z-10 opacity-30 blur-3xl"></div>
+</div>
+</div>
+</section>
+<!-- 3. Services Teaser Strip (Marquee) -->
+<div class="bg-primary-container py-8 border-y border-outline-variant overflow-hidden relative">
+<div class="flex marquee gap-12 items-center">
+<div class="flex items-center gap-12">
+<span class="text-tertiary-fixed-dim font-headline-sm text-headline-sm">إنتاج مرئي</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-2xl">eco</span>
+<span class="text-tertiary-fixed-dim font-headline-sm text-headline-sm">كتابة سيناريو</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-2xl">eco</span>
+<span class="text-tertiary-fixed-dim font-headline-sm text-headline-sm">مونتاج احترافي</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-2xl">eco</span>
+<span class="text-tertiary-fixed-dim font-headline-sm text-headline-sm">استراتيجية محتوى</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-2xl">eco</span>
+</div>
+<!-- Repeat for seamless scrolling -->
+<div class="flex items-center gap-12">
+<span class="text-tertiary-fixed-dim font-headline-sm text-headline-sm">إنتاج مرئي</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-2xl">eco</span>
+<span class="text-tertiary-fixed-dim font-headline-sm text-headline-sm">كتابة سيناريو</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-2xl">eco</span>
+<span class="text-tertiary-fixed-dim font-headline-sm text-headline-sm">مونتاج احترافي</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-2xl">eco</span>
+<span class="text-tertiary-fixed-dim font-headline-sm text-headline-sm">استراتيجية محتوى</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-2xl">eco</span>
+</div>
+</div>
+</div>
+<!-- 4. Featured Work Grid -->
+<section class="py-24 bg-surface paper-texture relative">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col items-center mb-16 gap-4">
+<h2 class="font-headline-md text-headline-md text-primary">آخر بضاعتنا</h2>
+<div class="w-24 h-1 bg-secondary rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="flex flex-col items-center gap-6 group cursor-pointer">
+<div class="relative w-full aspect-[9/16] rounded-xl overflow-hidden border border-outline-variant shadow-sm transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-xl bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A cinematic portrait-oriented video frame showing a creative artist painting a mural on a limestone wall in an old city street. The lighting is golden hour, casting long soft shadows. The overall aesthetic is rich and editorial, with deep emerald green and clay red accents that align with the brand's sophisticated Palestinian agency theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN0z5qx2SVIMkObjxOFftU16HKcjmFY1TmAlgnStDYYEw92jGcxRyBZuHSwaxtr0zL-4ODuxSoUswpL_5YPd6ew1X-Y8dvok9_sG8wv0R4QxxUnTPz1j13ta6QSOUKbxhMwclp9LpYHYMWfDcKl3A0fSn4vtNKx31Q8NTj312DZInmlPeRRXzcqJCb6Sw8coC6JG4c-WqCYsLYQVeksln_LztsfJsE9-ZbBvNu6EyypEQGiTibjqnqpnm4sj5TOkUPHP87hDFieSc"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute top-4 right-4 bg-secondary text-on-secondary px-3 py-1 rounded-full text-label-md font-label-md">حملة رمضانية</div>
+</div>
+<div class="text-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">إطلاق علامة "تراث"</h3>
+<p class="text-on-surface-variant font-body-md">زيادة التفاعل بنسبة 300%</p>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="flex flex-col items-center gap-6 group cursor-pointer">
+<div class="relative w-full aspect-[9/16] rounded-xl overflow-hidden border border-outline-variant shadow-sm transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-xl bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A vertical video still of a high-end gourmet chef plating a traditional dish with a modern twist. The environment is a clean, minimalist kitchen with dark wood surfaces. The color palette features rich oranges from the food and dark primary greens from the brand design system, creating a professional and appetizing visual for a social media reel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVnOYgrYah--D-f7aeIiNwT27fH5KjcjNdCJ1uB90xRn5xwhZ_r_i3Dw24AsX6XXm5ww975Ekbc8RK1TESkN-oFPQrlMZpl0g1V1xtiKBE_pxy1KZbiCnCnfJy3SFGznMwCOh-ACZZW1CAp0Ce51pHGYmhZF8Pj3D53cNfpl466LQrcpd_WM-Pb87yIuP-V2dwWIzboTBqvmNw8O7LYRTZGWNCrQjl1eb_QAKiCWG73Dnf2DsjL2YNIV_valmLQ-1-BWX46ARCKZI"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute top-4 right-4 bg-secondary text-on-secondary px-3 py-1 rounded-full text-label-md font-label-md">مطاعم وفنادق</div>
+</div>
+<div class="text-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">قصة "مطبخ الحارة"</h3>
+<p class="text-on-surface-variant font-body-md">أكثر من 1 مليون مشاهدة</p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="flex flex-col items-center gap-6 group cursor-pointer">
+<div class="relative w-full aspect-[9/16] rounded-xl overflow-hidden border border-outline-variant shadow-sm transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-xl bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A dynamic action shot for a lifestyle reel, showing a person hiking through the rolling hills of the Galilee at sunrise. The colors are misty greens and soft morning light. The composition is vertical, perfect for a Reel, following the editorial minimalism of the design system with a grounded, natural feeling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWjk-G17Po2fN2bfVFOlh4mcXKpbcLIXHe16oTuiPlhCEv6zecaBjpE3NCk8lMIEYaIQqXk9sMl-1s0B1xIGli1n37fTinb9UleuIg8QKuhRP6gMTfbRrTPq1GpwEv-AdRW6eSpvgARQruZkoy1q6DNQxUlPbHc-vyryADuCcy9dN4ZV1KgcQwORVuLgJcilY3cz045JXBCxHErG6Mhr8mXiXtgS4rutzNQ6SsPcfGrE9MhXwRBTUzTUiTSNb4xdUYspxBDXjs-as"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute top-4 right-4 bg-secondary text-on-secondary px-3 py-1 rounded-full text-label-md font-label-md">لايف ستايل</div>
+</div>
+<div class="text-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">رحلة "بلادي"</h3>
+<p class="text-on-surface-variant font-body-md">تصوير جوي وإخراج إبداعي</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Client Logos (Marquee Reverse) -->
+<section class="py-16 bg-surface-container-low border-y border-dashed border-outline-variant">
+<div class="flex flex-col items-center gap-8">
+<p class="font-label-md text-label-md text-outline tracking-widest uppercase">شركاؤنا في النجاح</p>
+<div class="w-full overflow-hidden">
+<div class="flex marquee-reverse gap-20 items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
+<span class="font-headline-md text-headline-md">Logo 1</span>
+<span class="font-headline-md text-headline-md">Logo 2</span>
+<span class="font-headline-md text-headline-md">Logo 3</span>
+<span class="font-headline-md text-headline-md">Logo 4</span>
+<span class="font-headline-md text-headline-md">Logo 5</span>
+<span class="font-headline-md text-headline-md">Logo 6</span>
+<!-- Repeat -->
+<span class="font-headline-md text-headline-md">Logo 1</span>
+<span class="font-headline-md text-headline-md">Logo 2</span>
+<span class="font-headline-md text-headline-md">Logo 3</span>
+<span class="font-headline-md text-headline-md">Logo 4</span>
+<span class="font-headline-md text-headline-md">Logo 5</span>
+<span class="font-headline-md text-headline-md">Logo 6</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Testimonials -->
+<section class="py-32 bg-surface paper-texture overflow-hidden">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop relative">
+<span class="material-symbols-outlined absolute -top-10 -right-10 text-[12rem] text-primary/5 select-none">format_quote</span>
+<div class="max-w-3xl mx-auto text-center flex flex-col gap-12">
+<h2 class="font-headline-md text-headline-md text-primary">قالوا عن دكاننا</h2>
+<div class="relative" id="testimonial-slider">
+<div class="flex flex-col gap-6">
+<p class="font-display-lg-mobile md:font-headline-md text-display-lg-mobile md:text-headline-md text-on-surface italic leading-relaxed">
+                            "تعاملنا مع دكان الريلز كان بمثابة نقطة تحول لعلامتنا التجارية. لم نتوقع هذا الانتشار الواسع في وقت قياسي. فعلًا.. ريلز بيوصل!"
+                        </p>
+<div class="flex flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full bg-secondary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a middle-eastern business executive, smiling warmly against a soft-focus office background. The lighting is bright and modern, conforming to a light-mode aesthetic with warm skin tones and professional attire, reflecting trust and success." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7eO4peq3Bf_141mDspELKU0sVRULiAOGGEANIE4dRWYSraF8blQtjBPHwsIUs5H-MGEOOtgzIRCVlNeHCxcgLl9meLdJnlgi0s3W7PC7J8zWGXYDu-HMiAB9mOt65YtvT42HRMDsFlJzQkteYNu2c3APA9wBzIwfMKtzjBHY3KRUktSaKro-eEcS2eE62SCJg9TOufZ54KSjcUdnJZzaxqB-cWUFmgqUa98GL7EYIFfVxxsadqtoFU6sMD2Hz19PgAw8BkTcyv2w"/>
+</div>
+<span class="font-bold text-primary">أحمد سلامة</span>
+<span class="text-on-surface-variant text-sm">مدير تسويق - شركة جبل</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Footer (Receipt Style) -->
+<footer class="bg-surface-container-low dark:bg-surface-container pt-20 pb-20 border-x border-outline-variant border-dashed max-w-2xl mx-auto relative receipt-edge shadow-sm">
+<div class="flex flex-col items-center text-center space-y-8 px-gutter">
+<div class="flex flex-col items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary">دكان الريلز</span>
+<p class="text-outline text-xs">صُنع بحب في فلسطين</p>
+</div>
+<div class="w-full border-t border-outline-variant border-dashed pt-8">
+<ul class="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant">
+<li class="flex justify-between items-center w-full px-8">
+<span>الخدمات</span>
+<span class="font-bold text-secondary">إنتاج مرئي</span>
+</li>
+<li class="flex justify-between items-center w-full px-8">
+<span>التواصل</span>
+<span class="font-bold text-secondary">واتساب / ايميل</span>
+</li>
+<li class="flex justify-between items-center w-full px-8">
+<span>الخصوصية</span>
+<span class="font-bold text-secondary">سياسة الاستخدام</span>
+</li>
+</ul>
+</div>
+<div class="w-full border-t border-outline-variant border-dashed pt-8 pb-4">
+<p class="font-body-md text-body-md text-on-surface">شكراً لزيارتكم دكان الريلز - جميع الحقوق محفوظة ٢٠٢٤</p>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+</div>
+</footer>
+<!-- SideNavBar (Floating Action Button style as requested by component) -->
+<div class="fixed bottom-8 left-8 z-50">
+<a class="bg-secondary text-on-secondary flex items-center justify-center rounded-full h-16 w-16 shadow-md hover:bg-on-secondary-fixed-variant transition-all hover:-translate-y-1 active:scale-90 duration-150 group" href="https://wa.me/yourlink" target="_blank">
+<span class="material-symbols-outlined text-3xl">chat</span>
+<span class="absolute right-20 bg-primary text-on-primary px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">تواصل معنا</span>
+</a>
+</div>
+<script>
+        // Micro-interactions and Parallax
+        document.addEventListener('mousemove', (e) => {
+            const parallaxElements = document.querySelectorAll('.parallax-element');
+            const x = (window.innerWidth - e.pageX * 2) / 100;
+            const y = (window.innerHeight - e.pageY * 2) / 100;
+
+            parallaxElements.forEach(el => {
+                el.style.transform = `translateX(${x}px) translateY(${y}px) rotate(${x/2}deg)`;
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>دكان الريلز | أعمالنا</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Reem+Kufi:wght@400;500;600;700&family=Rakkas&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@100..900&family=Tajawal:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .tatreez-divider {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0l5 15h15l-12 9 5 16-13-10-13 10 5-16-12-9h15z' fill='%23173317' fill-opacity='0.1'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: 40px;
+            height: 40px;
+            width: 100%;
+        }
+
+        .phone-mockup {
+            position: relative;
+            border: 8px solid #1c1b1b;
+            border-radius: 2rem;
+            overflow: hidden;
+            aspect-ratio: 9 / 16;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: #000;
+        }
+
+        .phone-mockup:hover {
+            transform: scale(1.03);
+            z-index: 10;
+        }
+
+        .phone-mockup:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gold-frame {
+            border: 15px solid transparent;
+            border-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none'/%3E%3Cpath d='M5 5h90v90H5z' stroke='%23e4c278' stroke-width='4' fill='none'/%3E%3Cpath d='M10 10h80v80H10z' stroke='%23564000' stroke-width='1' fill='none'/%3E%3C/svg%3E") 30 stretch;
+            padding: 10px;
+            background-color: white;
+        }
+
+        body {
+            background-color: #fcf9f8;
+            color: #1c1b1b;
+        }
+
+        .newspaper-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fcf9f8",
+                        "on-secondary-container": "#721603",
+                        "on-primary-fixed-variant": "#304e2e",
+                        "surface-variant": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#85230f",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#052107",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#f0eded",
+                        "inverse-surface": "#313030",
+                        "on-secondary-fixed": "#3d0600",
+                        "on-surface-variant": "#434840",
+                        "surface": "#fcf9f8",
+                        "on-tertiary-fixed": "#251a00",
+                        "on-tertiary-fixed-variant": "#5a4302",
+                        "on-primary-container": "#98b991",
+                        "primary-fixed-dim": "#aed0a7",
+                        "surface-container-highest": "#e5e2e1",
+                        "outline": "#737970",
+                        "inverse-primary": "#aed0a7",
+                        "secondary-fixed": "#ffdad3",
+                        "surface-container-low": "#f6f3f2",
+                        "primary-container": "#2d4a2b",
+                        "surface-bright": "#fcf9f8",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dcd9d9",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1c1b1b",
+                        "secondary-container": "#ff7d60",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#c3c8be",
+                        "on-surface": "#1c1b1b",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdf9b",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-fixed-dim": "#ffb4a4",
+                        "tertiary": "#3b2b00",
+                        "primary": "#173317",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#564000",
+                        "on-tertiary-container": "#cdac64",
+                        "tertiary-fixed-dim": "#e4c278",
+                        "primary-fixed": "#c9ecc1",
+                        "secondary": "#a53b24",
+                        "surface-tint": "#486644"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1200px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Tajawal"],
+                        "headline-sm": ["Reem Kufi"],
+                        "headline-md": ["Reem Kufi"],
+                        "display-lg": ["Reem Kufi"],
+                        "label-md": ["Tajawal"],
+                        "rakkas": ["Rakkas"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 flex flex-row-reverse justify-between items-center px-margin-desktop h-20 bg-primary border-b border-tertiary-container">
+<div class="font-headline-md text-headline-md text-tertiary-fixed-dim">دكان الريلز</div>
+<div class="hidden md:flex flex-row-reverse gap-8 items-center">
+<a class="text-on-primary opacity-80 hover:text-tertiary-fixed-dim transition-colors duration-300 font-headline-sm text-headline-sm" href="#">الرئيسية</a>
+<a class="text-on-primary opacity-80 hover:text-tertiary-fixed-dim transition-colors duration-300 font-headline-sm text-headline-sm" href="#">خدماتنا</a>
+<a class="text-tertiary-fixed font-bold border-b-2 border-tertiary-fixed pb-1 font-headline-sm text-headline-sm" href="#">أعمالنا</a>
+<a class="text-on-primary opacity-80 hover:text-tertiary-fixed-dim transition-colors duration-300 font-headline-sm text-headline-sm" href="#">عن الدكان</a>
+<a class="text-on-primary opacity-80 hover:text-tertiary-fixed-dim transition-colors duration-300 font-headline-sm text-headline-sm" href="#">اتصل بنا</a>
+</div>
+</nav>
+<!-- Header Section -->
+<header class="pt-40 pb-20 px-margin-desktop text-center max-w-4xl mx-auto">
+<h1 class="font-rakkas text-7xl md:text-8xl text-primary mb-6">شغلنا مع الزباين</h1>
+<p class="font-body-md text-on-surface-variant text-lg leading-relaxed">
+            قصص نجاح من دكاننا إلى العالم، ريلز صنعت بحب لتعبر عن هوية زباينا وتوصل رسالتهم بصدق وفن.
+        </p>
+</header>
+<!-- Filter Bar -->
+<div class="sticky top-20 z-40 bg-background/80 backdrop-blur-md py-6 mb-12 border-y border-outline-variant">
+<div class="px-margin-desktop flex flex-wrap justify-center gap-8">
+<button class="text-primary font-bold border-b-2 border-primary px-2 transition-all">الكل</button>
+<button class="text-on-surface-variant hover:text-primary transition-all font-medium">مطاعم</button>
+<button class="text-on-surface-variant hover:text-primary transition-all font-medium">أزياء وموضة</button>
+<button class="text-on-surface-variant hover:text-primary transition-all font-medium">هويات شخصية</button>
+<button class="text-on-surface-variant hover:text-primary transition-all font-medium">شركات ناشئة</button>
+</div>
+</div>
+<!-- Portfolio Grid -->
+<section class="px-margin-desktop mb-24">
+<div class="newspaper-grid">
+<!-- Reel 1 -->
+<div class="flex flex-col gap-4">
+<div class="phone-mockup shadow-xl group">
+<img class="w-full h-full object-cover" data-alt="A high-energy vertical video frame showing a close-up of traditional Palestinian food being served in a modern restaurant setting. The lighting is warm and cinematic, emphasizing textures and vibrant colors. The style is modern editorial with a touch of heritage, featuring deep greens and terracotta tones that align with a premium agency portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwlzZu7BvPmYEkDaeNigc3XyGV8YjLjGVhulIjEkyNTd6tpVYD65L9P54OtVXY18-wZXk0mV8HgQPCC4S4b0YQk5Wjjb4Kp_Pa-oKfp-zVwvbmbLyJRv0jd9A5HvSlyWXWFRJuhmxmLIcenUS9H9VVpSy9zhge9KM7cCcIyDTpiwAcA_EnQoMiYfm9DoOms0rZszEzP_crt1GEYWym7GtUzJqjAzCcMf-QZ3Vylif6MO9VXhj1iDwSgH1JNGID35BClXFCdMWw2Zo"/>
+<div class="play-overlay">
+<span class="material-symbols-outlined text-white text-6xl" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<div class="text-right">
+<h3 class="font-headline-sm text-primary">مطعم كنعان</h3>
+<p class="text-label-md text-secondary">حملة "نكهة البلاد"</p>
+</div>
+</div>
+<!-- Reel 2 -->
+<div class="flex flex-col gap-4 mt-12 md:mt-0">
+<div class="phone-mockup shadow-xl group">
+<img class="w-full h-full object-cover" data-alt="A vertical cinematic fashion reel showing a model wearing contemporary clothing inspired by traditional Palestinian embroidery. The setting is a minimalist white studio with dramatic shadows. The color palette consists of cream, charcoal, and subtle gold accents, maintaining a high-fashion editorial feel for a professional portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEyzOSvwVY6w3lafgJxmuc5r22N_dRd5Nkut49rSqvH6FW60i5xcBmWpCnl09sCuNRmeLXWJb4y7kRYQORXLLUFGVvy182k0hkoYGphrAChIZvrsiXU8-6G-WS5WKBnRYPD7QnuBBiKjOdY31EeJ_6R9gWlrvwwZmOXymQK7txCmSspWVOc3R7v2w9VAbyhS9_kN0XkU7plVHGxQPaLUh-1jAw5JdOT7qzaCvcauvJggoV2hW1qPtHUxYSiJOs4ZXY-mD-_Hyc0GQ"/>
+<div class="play-overlay">
+<span class="material-symbols-outlined text-white text-6xl" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<div class="text-right">
+<h3 class="font-headline-sm text-primary">خيوط الحداثة</h3>
+<p class="text-label-md text-secondary">أزياء تراثية</p>
+</div>
+</div>
+<!-- Reel 3 -->
+<div class="flex flex-col gap-4">
+<div class="phone-mockup shadow-xl group">
+<img class="w-full h-full object-cover" data-alt="A professional personal brand reel featuring an entrepreneur speaking directly to the camera in a modern, plant-filled office. The video quality is crisp with a shallow depth of field. The color scheme features deep olive greens and soft cream backgrounds, conveying authority and creative innovation for a digital agency's showcase." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_PzUEOBUoElayzBfR69m8GNkMehVe0MS9QguLdFhEiExVW1OMnMW486Wmvrp-WU9K6vgKwFFQDTtfRJs18iW_DLGBpvawI95Zf79ooNASdKIPiEJyLeIEhzLKMz480L6oLp2gF5IXFuFWPNWJTWt0IF9IPcPUysdLbYHew9Cx308Gi8z2on-j_JLPuF3_mvdFM7Tc3YIxLd97jkIPICQTCaBP9tbK0fJLvFAaw3U2kiGsclMZxRDb4crlf_5IPG2oIYRH0x_xDYQ"/>
+<div class="play-overlay">
+<span class="material-symbols-outlined text-white text-6xl" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<div class="text-right">
+<h3 class="font-headline-sm text-primary">د. لينا خليل</h3>
+<p class="text-label-md text-secondary">صناعة المحتوى التعليمي</p>
+</div>
+</div>
+<!-- Reel 4 -->
+<div class="flex flex-col gap-4 mt-8">
+<div class="phone-mockup shadow-xl group">
+<img class="w-full h-full object-cover" data-alt="A fast-paced, rhythmic edit showing architectural highlights of a new boutique hotel. The reel uses dynamic transitions and high-contrast lighting to showcase luxury and heritage. The overall mood is sophisticated and grounded, using the brand's primary green and gold palette for a high-end portfolio presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_0Nao2KMcskHMlcBUfaH_tCFB8c_1ijOeBHxNemEOlUQl4wt4wf_CiB59US3ujmWdCv2ylNzp_pKdZOfupzYEI3dAvX_6QlBUqRvF4ZeWvIVJroSZclEAvgrzOEP7O_HrWpo8xdvT4SOEigRxJulW4rdABYQ7bMQi6ScpuBZRpjWgKflVmlHmYmcKmT9NYAVYle4SKuq1qsind9FhOQ47G8v5PZZHNk06jErwmzV8s-0_zUZWbIzQnWXoZkhCyqEWxyNw07TwvoY"/>
+<div class="play-overlay">
+<span class="material-symbols-outlined text-white text-6xl" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<div class="text-right">
+<h3 class="font-headline-sm text-primary">فندق يافا</h3>
+<p class="text-label-md text-secondary">جولة بصرية</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Tatreez Divider -->
+<div class="tatreez-divider my-16 opacity-50"></div>
+<!-- Case Study Featured Section -->
+<section class="px-margin-desktop mb-32">
+<div class="grid md:grid-cols-2 gap-16 items-center bg-surface-container-low p-12 rounded-lg border border-outline-variant relative overflow-hidden">
+<div class="absolute top-0 left-0 w-24 h-24 opacity-10">
+<span class="material-symbols-outlined text-8xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="order-2 md:order-1">
+<div class="gold-frame shadow-2xl">
+<img class="w-full h-auto" data-alt="A wide-angle, masterfully composed photo of a large-scale creative campaign launch event. People are interacting with digital displays under soft, warm lighting. The aesthetic is extremely premium, blending old-world reliability with modern technology, featuring the palette of olive green, gold, and cream to represent the agency's peak work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL197tjpQXVuyIyI-hs4uQldcUkpPoIC8c6wdASd0_bb8gfQ7OUr4CRCLRX-zu-vnvHtTNUlTaQxjuzJam0HLx-2l5GFwc7jCBnNKJawmJ8Cr4B2mg9kF7qjR7wctagya8-FsyJz6xgFAHwu7_3NdoNJ4q8HDvwu67UGKRci4fhUO2f1eEqEYHRKMDFXM6oB_0b5ZqwRr8cVubSVuzZJat459M11fU87_Rx4-PzkYxoAoD3j6kNqCgR4qQ742VZ5TJ9gktKRpRKv8"/>
+</div>
+</div>
+<div class="order-1 md:order-2 text-right">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 text-label-md rounded-full mb-4 inline-block">حملة الموسم</span>
+<h2 class="font-rakkas text-5xl text-primary mb-6">قهوة الروزنا: من المحلي إلى العالمي</h2>
+<p class="font-body-md text-on-surface-variant mb-8 text-lg leading-relaxed">
+                    عملنا مع قهوة الروزنا على إعادة صياغة حضورهم الرقمي بشكل كامل. من خلال سلسلة من 12 ريلز احترافية، استطعنا زيادة التفاعل بنسبة 300% ورفع المبيعات المباشرة من خلال انستغرام. ركزنا في القصة على تفاصيل تحميص القهوة التقليدي بروح عصرية تليق بجيل الشباب.
+                </p>
+<button class="bg-primary text-white font-label-md px-10 py-4 rounded-lg hover:bg-black transition-all transform active:scale-95 flex items-center gap-2 mr-auto md:mr-0">
+<span>اقرأ القصة كاملة</span>
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-x border-outline-variant border-dashed w-full max-w-2xl mx-auto pt-10 pb-20 flex flex-col items-center text-center space-y-4 px-gutter relative after:content-[''] after:block after:w-full after:h-4 after:bg-[url('https://www.transparenttextures.com/patterns/zigzag.png')]">
+<div class="font-headline-sm text-headline-sm text-primary">دكان الريلز</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:underline decoration-secondary font-body-md text-body-md" href="#">الخدمات</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary font-body-md text-body-md" href="#">تواصل معنا</a>
+<a class="text-on-surface-variant hover:underline decoration-secondary font-body-md text-body-md" href="#">سياسة الخصوصية</a>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md opacity-60">شكراً لزيارتكم دكان الريلز - جميع الحقوق محفوظة ٢٠٢٤</p>
+</footer>
+<!-- Side Contact FAB -->
+<div class="fixed bottom-8 left-8 z-50">
+<a class="bg-secondary text-on-secondary flex items-center justify-center rounded-full h-16 w-16 shadow-md hover:bg-on-secondary-fixed-variant transition-all hover:-translate-y-1 active:scale-90 duration-150" href="https://wa.me/yournumber">
+<span class="material-symbols-outlined text-3xl" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+</div>
+<script>
+        // Simple Interaction: Filter button switching
+        const filterButtons = document.querySelectorAll('.sticky button');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('text-primary', 'font-bold', 'border-b-2', 'border-primary');
+                    b.classList.add('text-on-surface-variant', 'font-medium');
+                });
+                btn.classList.add('text-primary', 'font-bold', 'border-b-2', 'border-primary');
+                btn.classList.remove('text-on-surface-variant', 'font-medium');
+            });
+        });
+    </script>
+</body></html>
