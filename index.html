@@ -111,23 +111,19 @@
         }
         .marquee {
             white-space: nowrap;
-            overflow: hidden;
-            display: inline-block;
             animation: marquee 30s linear infinite;
         }
         @keyframes marquee {
             0% { transform: translateX(0); }
-            100% { transform: translateX(100%); }
+            100% { transform: translateX(50%); }
         }
         .marquee-reverse {
             white-space: nowrap;
-            overflow: hidden;
-            display: inline-block;
             animation: marquee-reverse 30s linear infinite;
         }
         @keyframes marquee-reverse {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
+            100% { transform: translateX(-50%); }
         }
         .tatreez-border {
             mask-image: url('https://www.transparenttextures.com/patterns/pixel-weave.png');
