@@ -127,6 +127,10 @@
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
+        @keyframes logos-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-25%); }
+        }
         .tatreez-border {
             mask-image: url('https://www.transparenttextures.com/patterns/pixel-weave.png');
             background-color: currentColor;
@@ -277,12 +281,17 @@
 <section class="py-16 bg-surface-container-low border-y border-dashed border-outline-variant">
 <div class="flex flex-col items-center gap-8">
 <p class="font-label-md text-label-md text-outline tracking-widest uppercase">شركاؤنا في النجاح</p>
-<div class="w-full overflow-hidden">
-<div class="flex marquee-reverse gap-20 items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
+<div class="w-full overflow-hidden" style="direction: ltr;">
+<div class="flex items-center gap-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-700" style="width: max-content; animation: logos-scroll 18s linear infinite; direction: ltr;">
 <img src="images/samsong.jpg" alt="سامسونج" class="h-16 w-auto object-contain rounded-lg"/>
 <img src="images/radio-basma.avif" alt="راديو بسمة" class="h-16 w-auto object-contain rounded-lg bg-black p-2"/>
 <img src="images/joker.jpeg" alt="جواكر" class="h-16 w-auto object-contain rounded-lg"/>
-<!-- Repeat for seamless scroll -->
+<img src="images/samsong.jpg" alt="سامسونج" class="h-16 w-auto object-contain rounded-lg"/>
+<img src="images/radio-basma.avif" alt="راديو بسمة" class="h-16 w-auto object-contain rounded-lg bg-black p-2"/>
+<img src="images/joker.jpeg" alt="جواكر" class="h-16 w-auto object-contain rounded-lg"/>
+<img src="images/samsong.jpg" alt="سامسونج" class="h-16 w-auto object-contain rounded-lg"/>
+<img src="images/radio-basma.avif" alt="راديو بسمة" class="h-16 w-auto object-contain rounded-lg bg-black p-2"/>
+<img src="images/joker.jpeg" alt="جواكر" class="h-16 w-auto object-contain rounded-lg"/>
 <img src="images/samsong.jpg" alt="سامسونج" class="h-16 w-auto object-contain rounded-lg"/>
 <img src="images/radio-basma.avif" alt="راديو بسمة" class="h-16 w-auto object-contain rounded-lg bg-black p-2"/>
 <img src="images/joker.jpeg" alt="جواكر" class="h-16 w-auto object-contain rounded-lg"/>
